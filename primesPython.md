@@ -9,9 +9,11 @@ Prime_v1 is simplest and shortest one of them. The first step will be the same f
         return False
 ```
 Second step is to divide number with all the numbers from 2 to n-1. If we use ```for d in range(2, n):``` python will loop from 2 to n - 1. To check if number is divisible we use ``` % ```. This gives us remainder of division and if reminder of any divison is 0, number is not prime. If algorithm loops though all the numbers and doesn't find one number that divides n, number is prime:
-        ```.pyif n % d == 0:
+        ```.py
+        if n % d == 0:
             return False
-    return True```
+    return True
+    ```
 
 
 
