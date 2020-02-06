@@ -14,6 +14,16 @@ Second step is to divide number with all the numbers from 2 to n-1. If we use ``
         return False
 return True
 ```
+Program is working but if we want to check big amount of numbers, that can take some time. To measure time, so we have comaparable quantity, we import time module and substract start time of operation from end time of operation. We will use that part of code to test every version of this program.
+```.py
+import time
+t0 = time.time()
+for n in range(1, 100000): # This is range in which we are searching for prime numbers
+    prime_v1(n)
+t1 = time.time()
+print("Time required: ", t1 - t0) # We substract start time from end time
+```
+
 
 
 
