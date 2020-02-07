@@ -2,6 +2,7 @@ Map, filter, reduce, tuple and lambda funtions
 ====================================
 
 # Map
+
 Map function is a way to apply function to each piece of data. In our example we have aray of radiis and we want to caluculate area of the circle. First we define funstion ``` def area(r) ``` and list of data ``` radii = [2, 5, 7.1, 0.3, 10] ```. With the map function you first specifiy the function then you specify the data to iterate over:
 ```.py
 map(area, radii)
@@ -28,10 +29,10 @@ print(list(filter(lambda x: x > avg, data)))
 *note: lambda is way to define short function in line, will be explained in detail bellow
 
 We can also use filter function to filter out false data. In case of lists, false data is empy argument ``` " " ``` which is defined by ``` none ```. Here is example of filtering false data out of the list:
-
-
- 
-
+```.py
+countries = ["", "ffdsjflksd", "fdklsčfkdčs", "", "", "dlsfkčkdk", "fdkjdslf", ""]
+print(list(filter(None, countries)))
+```
 
 
 # Reduce
@@ -51,4 +52,5 @@ for x in data:
     product = product * x
 print(product)
 ```
+
 
