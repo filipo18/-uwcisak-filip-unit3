@@ -6,5 +6,5 @@ avg = statistics.mean(data)
 print(avg)
 print(list(filter(lambda x: x > avg, data)))
 
-countries = ["", "ffdsjflksd", "fdklsčfkdčs", "", "", "dlsfkčkdk", "fdkjdslf", ""]
+countries = ["", "Filip", "UWC ISAK", "", "", "2001", "Karuizawa", ""]
 print(list(filter(None, countries)))
