@@ -13,3 +13,6 @@ To operate with a touples ```temps = [("Berlin" 29), ("Cairo", 36)...]``` you ca
 function = labmda data: (data[position in tuple starting 0], data[1])
 ```
 ```Data []``` in brackets will behave as normal variable.
+
+
+# Filter
