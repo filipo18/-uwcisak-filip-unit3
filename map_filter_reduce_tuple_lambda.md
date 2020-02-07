@@ -30,9 +30,10 @@ print(list(filter(lambda x: x > avg, data)))
 
 We can also use filter function to filter out false data. In case of lists, false data is empy argument ``` " " ``` which is defined by ``` none ```. Here is example of filtering false data out of the list:
 ```.py
-countries = ["", "ffdsjflksd", "fdklsčfkdčs", "", "", "dlsfkčkdk", "fdkjdslf", ""]
+countries = ["", "Filip", "UWC ISAK", "", "", "2001", "Karuizawa", ""]
 print(list(filter(None, countries)))
 ```
+And this is the ouput you get ``` ['Filip', 'UWC ISAK', '2001', 'Karuizawa']```
 
 
 # Reduce
