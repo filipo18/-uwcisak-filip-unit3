@@ -1,9 +1,7 @@
 # Prime number video
-
-# Function venison 1
 import time
 import math
-
+# Function venison 1
 # Return true if n is a prime number, if it's not return false
 def prime_v1(n):
     if n == 1:
@@ -36,7 +34,7 @@ def prime_v3(n):
     if n > 2 and n % 2 == 0:
         return False
     max_divisor = math.floor(math.sqrt(n))
-    # we will check every number from 3 to sqrt(n) rounded down + 1, and count by to to
+    # we will check every number from 3 to sqrt(n) rounded down + 1, and count by 2 to
     # work only with odd numbers
     for d in range(3, 1 + max_divisor, 2):
         if n % d == 0:
@@ -50,4 +48,3 @@ for n in range(1, 100000):
     prime_v3(n)
 t1 = time.time()
 print("Time required: ", t1 - t0)
-
