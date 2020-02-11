@@ -15,3 +15,11 @@ Today's to do list:
 
 
 I learned how to use functions / libraries in python and it is really usefull. I think everything was preatty celar so I don't have any questions today
+
+Feb 11
+-------
+Today's to do list:
+1. Client - developer interviews
+1. Start coding secure login system
+
+Client - developer interviews went bad. People were not prepared and they didn't even know what they want. We were just loosing time with that probably for one hour. After that we started coding encrypted login part of the program. I never really undesrtood basic priciple of how login can be secure. Now when we coded it, it actually makes sense. This was interesting for me because it was kinda related to the topic of my EE.
