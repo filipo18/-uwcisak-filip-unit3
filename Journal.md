@@ -31,4 +31,4 @@ Today's to do list:
 1. Have client interviews to figgure out exactly what they want
 1. Work on our repository to finnish criteriaA.md file
 
-I didn't mannage to finnish criteriaA.md file, so I will work on that later 
+I didn't mannage to finnish criteriaA.md file, so I will work on that later. Client requirements still pretty unclear.
