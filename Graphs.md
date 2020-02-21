@@ -100,6 +100,12 @@ print(num)
 ```
 ## Homework Feb 21
 ### Graph 1
+
+![Graph1](graph1.jpg)
+
+**Graph 1** That is graph of the function f(x) = (x+1)^2 - 1
+
+Here is code for it:
 ```.py
 # This program will draw out the graph of f(x) function
 import matplotlib.pyplot as pyplot
@@ -122,6 +128,12 @@ pyplot.show()
 ```
 
 ### Graph 2
+
+![Graph2](graph2.jpg)
+
+**Graph 2** That is graph of the function g(x) = 0.1*sin(0.1*(x^2))
+Here is code for it:
+
 ```.py
 
 import matplotlib.pyplot as pyplot
