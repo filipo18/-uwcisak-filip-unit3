@@ -98,3 +98,46 @@ for i in range(1, 1000):
 
 print(num)
 ```
+## Homework Feb 21
+### Graph 1
+```.py
+# This program will draw out the graph of f(x) function
+import matplotlib.pyplot as pyplot
+import math
+num = -2
+x = []
+y = []
+# Doing 1000 steps from -2 will get us to 2
+for i in range(0, 999):
+    num = num + 0.004
+    y.append(((num + 1)**2) - 1)
+    x.append(num)
+# Create graph
+pyplot.plot(x, y)
+# Title for axis
+pyplot.xlabel('x')
+pyplot.ylabel('Y = F(x)')
+# Show graph
+pyplot.show()
+```
+
+### Graph 2
+```.py
+
+import matplotlib.pyplot as pyplot
+import math
+num = 0
+x = []
+y = []
+for i in range(0, 599):
+    num += 0.05
+    x.append(num)
+    y.append(0.1 * math.sin(0.1 * (num**2)))
+
+pyplot.plot(x, y)
+# Title for axis
+pyplot.xlabel('x')
+pyplot.ylabel('Y = F(x)')
+# Show graph
+pyplot.show()
+```
