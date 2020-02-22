@@ -1,4 +1,5 @@
 | Task Number | Planned Action | Expected outcome | Time Estimated | Target completion | Criteria |
 |-------------|----------------|------------------|----------------|-------------------|----------|
-| 1 | **Planning:** Meet with a client for a first conversation | 1. Obtain the basic client requrimenents 2. Sketch basic system diagram | 30 min | | A|
-| 2 | **Planing:** Meet with a client for a second conversation | 1. Create criteria of sucess. 2. Check it with him | 30 min | | A|
+| 1 | **Planning:** Meet with a client for a first conversation | 1. Obtain the basic client requrimenents 2. Sketch basic system diagram | 30 min | First conversaion was not really productive as client didn't know what he actually wants, need to have second conversation | A|
+| 2 | **Planing:** Meet with a client for a second conversation | 1. Create criteria of sucess. 2. Check it with him | 30 min | Meeting was more sucessful as the first one. I have preatty much accurate outline on what client wants | A|
+| 3 | **Development:** Work on secure login 1 | 1. Have a simple program that encripts password entered by user. 2. Pasword is stored just in the program, when user enteres correct passowrd and username he  gets the messege that login data was correct. 3. When program stops we loose all data. | 60 min | I have program that works exactly as I expected it too. | B |
