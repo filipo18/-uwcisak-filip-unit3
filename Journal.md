@@ -31,4 +31,18 @@ Today's to do list:
 1. Have client interviews to figgure out exactly what they want
 1. Work on our repository to finnish criteriaA.md file
 
-I didn't mannage to finnish criteriaA.md file, so I will work on that later. Client requirements still pretty unclear.
+I didn't mannage to finnish criteriaA.md file, so I will work on that later. Client requirements still pretty unclear. I will talk to client as I start developing inventory so client can keep track of work progress.
+
+Feb 19
+--------
+Today's to do list:
+1. Quick coding competition in 3 groups
+1. Short kahoot about python 
+1. Create simmple bank inventory
+
+Using functions is big part of pythong. I was super uncomfotable using them in Arduino C, but now using python I feel like I am getting better and better. I found python inbuild commands super usefull, but I am not used to the way they let you solve problems, so I will really work on getting better at using functions like map, reduce and filter. Making bank inventory was good practise for using fucntions.
+
+Feb 21
+-------
+Homework for this week was unusally short. I finnished it preatty qucik and questions were relatively simple. The bigest problem common to all questions we got was how to import given numbers in list of integers. I couldn't solve that on my own so I googled for solution and found it. After that everything was easy, but I still don't uderstnd the import part. I need to ask that Dr. Ruben in class. a = [int(i) for i in input().split()] 
+
