@@ -5,4 +5,4 @@ Development
 
 ![Registration flow diagram](Login.jpg)
 
-**Fig 1. ** Registration flow diagram
+**Fig 1.** Registration flow diagram
