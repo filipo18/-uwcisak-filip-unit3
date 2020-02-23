@@ -7,7 +7,7 @@ Client want a system which will enable him to keep track of his guitars. The pro
 ## Proposed solution
 I am going to design a Guitar Inventory software application for my client including a secured login system. The software application will help my client to reliably track who is using which guitar and the characteristics of each of this guitars such as type, colour and type of wood. To create that program I will be using python, because that is the programing langugage we are learning to code with in class right now. Syntax is not demanding and all the librarys existing for it, offeres countles coding possibilities.
 
-Problem was defined and solution was proposed based on first user email and short interview. Accesible in [Appendix folder](-uwcisak-filip-unit3/Inventoryproject/Appendix/)
+Problem was defined and solution was proposed based on first user email and short interview. Accesible in [appendix folder](/Inventoryproject/Appendix/)
 
 ## Success criteria:
 1. Being able to add guitar and specify it's properties (Type of guitar, color of guitar, type of wood)
