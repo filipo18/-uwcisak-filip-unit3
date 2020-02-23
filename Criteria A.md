@@ -13,5 +13,6 @@ Problem was defined and solution was proposed based on first user email and shor
 1. Being able to add guitar and specify it's properties (Type of guitar, color of guitar, type of wood)
 2. Log date when guitar is borrowed and when returned and by who
 3. System is secure, user is the only one who can access it
+
 **Coment on succes criteria** Succes criteria is maybe not defined enaught at this point. I will keep in touch with client, and keep him updated on development to see if his requirements will change.
 
