@@ -46,3 +46,11 @@ Feb 21
 -------
 Homework for this week was unusally short. I finnished it preatty qucik and questions were relatively simple. The bigest problem common to all questions we got was how to import given numbers in list of integers. I couldn't solve that on my own so I googled for solution and found it. After that everything was easy, but I still don't uderstnd the import part. I need to ask that Dr. Ruben in class. a = [int(i) for i in input().split()] 
 
+Feb 24
+------
+Today's to do list:
+1. Started working on object oriented programing OOP
+1. Work on graphing with python
+
+I learned a bit about OOP - how to use classes. I went over few pages of theory and it is a lot to process at once. I think I will get the hang of it by using it more. Last 3 revise questions on the handout Dr. Ruben gave us were pretty confusing. I din't uderstand what I need to do. I will ask in next class. Also it is prety consuing when you use self. something to call argument and when you don't.
+
