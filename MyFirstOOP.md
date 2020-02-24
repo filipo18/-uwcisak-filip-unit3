@@ -1,3 +1,25 @@
+## Comperhension check
+1. **Class** is blueprint or a template for how something should be defined, but deos not provide any real content by itself
+1. **Instance** is a copy of the class with actual values
+1. Class is like form, it defines needed information. When you fill out the form, your specific copy is an instance of a class - it contains actual information
+1. Python syntax used for defining a new class is CamelCase notation
+```.py
+class Animals:
+    pass
+```
+1. Spelling convention for a class nameis
+1. You create an instance by using name of the class and atrubutes you want to assign to it using syntax:
+```.py
+a = Dogs('pepe', 1)
+b = Dogs('tesla', 3)
+c = Dogs('MrP', 5)
+```
+1. Method is function defined inside class to perform operations with the atribures
+1. Purpose of self is always the first argument
+1.  We use ``` __init__``` to initialize and object's initial atributes by giving them their default value
+1. With inheritance we can use class that is already created and just add to it
+1. Child classes never override properties of their parrents, they can jsut add to it
+
 ## My first OOP practise
 ```.py
 # Example bellow shows how to define a class with instances
