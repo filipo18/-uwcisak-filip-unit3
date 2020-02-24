@@ -7,18 +7,18 @@
 class Animals:
     pass
 ```
-1. Spelling convention for a class nameis
-1. You create an instance by using name of the class and atrubutes you want to assign to it using syntax:
+5. Spelling convention for a class nameis
+6. You create an instance by using name of the class and atrubutes you want to assign to it using syntax:
 ```.py
 a = Dogs('pepe', 1)
 b = Dogs('tesla', 3)
 c = Dogs('MrP', 5)
 ```
-1. Method is function defined inside class to perform operations with the atribures
-1. Purpose of self is always the first argument
-1.  We use ``` __init__``` to initialize and object's initial atributes by giving them their default value
-1. With inheritance we can use class that is already created and just add to it
-1. Child classes never override properties of their parrents, they can jsut add to it
+7. Method is function defined inside class to perform operations with the atribures
+8. Purpose of self is always the first argument
+9.  We use ``` __init__``` to initialize and object's initial atributes by giving them their default value
+10. With inheritance we can use class that is already created and just add to it
+11.Child classes never override properties of their parrents, they can jsut add to it
 
 ## My first OOP practise
 ```.py
