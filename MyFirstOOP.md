@@ -18,7 +18,7 @@ c = Dogs('MrP', 5)
 8. Purpose of self is always the first argument
 9.  We use ``` __init__``` to initialize and object's initial atributes by giving them their default value
 10. With inheritance we can use class that is already created and just add to it
-11.Child classes never override properties of their parrents, they can jsut add to it
+11. Child classes never override properties of their parrents, they can jsut add to it
 
 ## My first OOP practise
 ```.py
