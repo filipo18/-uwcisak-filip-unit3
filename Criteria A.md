@@ -10,11 +10,11 @@ I am going to design a Guitar Inventory software application with graphical user
 Problem was defined and solution was proposed based on first user email and short interview. Accesible in [appendix folder](/Inventoryproject/Appendix/)
 
 ## Success criteria:
-1. Being able to add guitar and specify it's properties (Type of guitar, color of guitar, type of wood)
-2. Log date when guitar is borrowed and when returned and by who
-3. System is secure, user is the only one who can access it
-  * User can add it's own user name
-  * Pasword is encrypted, developer is not able to get it
+1. Being able to add guitar
+1. Specify guotars properties (Type of guitar, color of guitar, type of wood)
+1. Beeing able to remove guitar
+1. Log date when guitar is borrowed and when returned and by who
+1. User can create user name and use his password (which is encrypted) to log in
 
 **Coment on succes criteria** Succes criteria is maybe not defined enaught at this point. I will keep in touch with client, and keep him updated on development to see if his requirements will change.
 
