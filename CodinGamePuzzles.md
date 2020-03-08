@@ -51,7 +51,7 @@ while True:
         initial_tx -= 1
 
     print(move)
-    ```
+```
     
 ## There is no spoon
 The amount of time I spend on this problem was no fun. Fisrt of all understanding theese problems as I already mentioned is always the hardest part. I don't like this concept of problems at all. When I figured out what game wants from me I figgured out most of the program preaty quick but it was not working and I couldn find a solution. After spending over an hour on this problem I decided to finnish it next day. I talked to classmates about this problem and today I finished it preaty quick.
