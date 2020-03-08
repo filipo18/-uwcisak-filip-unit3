@@ -11,7 +11,7 @@ Problem was defined and solution was proposed based on first user email and shor
 
 ## Success criteria:
 1. Being able to add guitar
-1. Specify guotars properties (Type of guitar, color of guitar, type of wood)
+1. Specify guitars properties (Type of guitar, color of guitar, type of wood)
 1. Beeing able to remove guitar
 1. Log date when guitar is borrowed and when returned and by who
 1. User can create user name and use his password (which is encrypted) to log in
