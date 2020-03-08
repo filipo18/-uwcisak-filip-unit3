@@ -58,6 +58,7 @@ The amount of time I spend on this problem was no fun. Fisrt of all understandin
 import sys
 import math
 
+```.py
 width = int(input())  # the number of cells on the X axis
 height = int(input())  # the number of cells on the Y axis
 
@@ -97,3 +98,4 @@ for line in range(height): # Vertical line index
                     
 
             print(x1, y1, x2, y2, x3, y3)
+```
