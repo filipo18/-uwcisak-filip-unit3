@@ -9,6 +9,19 @@ I am going to design a Guitar Inventory software application with graphical user
 
 Problem was defined and solution was proposed based on first user email and short interview. Accesible in [appendix folder](/Inventoryproject/Appendix/)
 
+Here are proposed sketches, just basic outline how program will look.
+
+![sketch 1](sketch.jpg)
+
+**Fig 1.** First sketch
+
+![sketch 2](sketch2.jpg)
+
+**Fig 2.** Second sketch
+
+When user comes past first log in window, he will see main inventory window with table of all the guitars, with action buttons of what he can do from there. If customer presses one of the buttons, smaller pop up window opens: ADD GUITAR, EDIT GUITAR, DELETE GUITAR, LEND GUITAR OR DELETE GUITAR.
+
+
 ## Success criteria:
 1. Being able to add guitar
 1. Specify guitars properties (Type of guitar, color of guitar, type of wood)
