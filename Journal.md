@@ -54,3 +54,20 @@ Today's to do list:
 
 I learned a bit about OOP - how to use classes. I went over few pages of theory and it is a lot to process at once. I think I will get the hang of it by using it more. Last 3 revise questions on the handout Dr. Ruben gave us were pretty confusing. I din't uderstand what I need to do. I will ask in next class. Also it is prety consuing when you use self. something to call argument and when you don't.
 
+Mar 3
+-----
+I showed my sketched designes to my customer. Dr. Ruben showed us how to use these sketches in python to create a program with GUI. The whole OOP with classes is still preaty abstract and unclear for me. I don't understand what every line of code is doing in our programs. WE finnished simpe currency exchange program.
+
+Mar 4
+-----
+Dr. Ruben is absend this week, we got few tasks to complete till monday. I will do that on the weekend,  becasue now I need to study for some tests I have this week
+
+Mar 7
+------
+I started working on homework we had this week. More about my expirinece with it can be found in root of my repository in file CodinGamePuzzles.md I dind't finish today, I got annoyed by last problem. I will try to finnish it tomorrow. In general, tasks are not to hard. The most confusig part for me is to uderstand inputs, reqirements and outputs. When I figure that out the rest is realtvely easy.
+
+Mar 8
+------
+I finished with the last task from the homework.
+
+
