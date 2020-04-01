@@ -72,17 +72,18 @@ I finished with the last task from the homework.
 
 Apr 1
 -------
+
+
+Apr 2
+------
+Tasks:
 Tasks:
 1. First task today is to answer syllabus questions for week 28
 1. Add system diagram and everything else that is missing by now to the repository
 1. Showing all the windows and coding button behavior in my Inventory program
 1. Add all that to the repository
-
-Apr 2
-------
-Tasks:
-1. Fisnnish any unfinnished tasks from yesterday
 1. Go thorough the database video and decide if I will do that or do the coding tasks from the homework
+
 
 
 Apr 3
