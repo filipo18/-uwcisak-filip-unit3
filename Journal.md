@@ -77,14 +77,13 @@ Apr 1
 Apr 2
 ------
 Tasks:
-Tasks:
 1. First task today is to answer syllabus questions for week 28
-1. Add system diagram and everything else that is missing by now to the repository
 1. Showing all the windows and coding button behavior in my Inventory program
 1. Add all that to the repository
 1. Go thorough the database video and decide if I will do that or do the coding tasks from the homework
 
-
+Because I had some problems with debuging in last class in school, I was a bit behind on the development. So today I watched videos on showing dialog windows and coding button behavior posted a while ago in the classroom. I learnd how to open dialog windows from the mainappwindow and how to code some logic into the buttons. Now every button in mainappwindow is working and first login page takes us to registration page if we click registration button. I also learned how to code some logic to the buttons. I spent too much time on that, because of some debuging issiues I had (I needed to fix windows in QTDesigner, but I didn't see changes in my app. It turns out that file names were differet than I tought they were so I ended up fixing window in QTDesinger at least 5 times, and than converting it to py fille in terminal. But because of different names I was not conerting fixed files. It took me a while to figure out what's happening, debuging process is always so frustrating :-(
+Because this is first week of online classes everyone is still a bit confused and figuring things out, so somehow I ended up having almost all of my classes every day of this week, so I was a bit bussy and this is all I did for CS. I watched the databases video I will probably code them tomorrow. I will also start with syllabus and coding questions tomorrow and I hope I will finnish them. If not I definetly need to do them over the weekend!
 
 Apr 3
 --------
