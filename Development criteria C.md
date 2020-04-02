@@ -28,15 +28,14 @@ class LoginApp(loginW):
         self.setupUi(self)
  ```
  LoginApp class I created, is inheriting from LoginWindow class. I created UI in QTdesigner, then I used ```pyuic5 file.ui -o file.py ``` comand to convert it to py file. This is where loginWindow class is coming from. It has all visual properties of my window. The method ``` def __init__``` is used to initialize the window and set it up with ``` self.setupUi(self) ``` command. The only exception to this process is MainWindow which is also inheriting from QMainWindow class: ``` class MainWindowApp(QMainWindow, mainW): ```. Everything else is the same.
-1. To open dialog window I create methods under MainWindowApp class.
+2. To open dialog window I create methods under MainWindowApp class.
 ```.py 
     def addFunc(self):
         addVar = AddApp(self)
         addVar.show()
 ```
 AddApp is class of the window we are opening.
-1. We can connect each button to specific method. We do that by using the line
+3. We can connect each button to specific method. We do that by using the line
 ```.py
 self.name_of_button.clicked.connect(self.nameOfMethod)
 ```
-1. 
