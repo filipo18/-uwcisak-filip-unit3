@@ -90,3 +90,10 @@ Tasks:
 1. Answer the syllabus questions
 1. Do the coding tasks
 
+From syllabus the new thing I learned is what is memory data registar. I did't actually study anything from the sylabus I just ctrl+f in the files for the thing the question was asking for. 
+
+**HL question**
+I learned how to plot graph from csv file... at least I thought I did. Then I opened total_cases.csv file and I was conused. I was trying to make graph for some time and then I gave up. Just before I started writing this journal the idea appeared in my head I went back check total_cases.csv file again and I understod what it means. I think I know what I need to do now. First row lists all the countries. Then in each row number of total cases matches position of the country for the first row. So I create a list of every second element in every row. This will be number of total cases. Than I find my country and do the same. Then I just plot both curves. I need to do this tomorrow.
+
+I have few questions about creating graphs but I will google about that tomorrow and try to solve HL Question.
+
