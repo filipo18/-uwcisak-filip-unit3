@@ -8,4 +8,10 @@ One usability issue could be short battrery life. Limited space in mobile device
 ![Truth table](truthtable.png)
 
 ### Question 3
-Protocol, in computer science, a set of rules or procedures for transmitting data between electronic devices, such as computers. #[Source](https://www.britannica.com/technology/protocol-computer-science)
+Protocol, in computer science, a set of rules or procedures for transmitting data between electronic devices, such as computers. [Source](https://www.britannica.com/technology/protocol-computer-science)
+
+### Question 4
+Memory data Register holds data that is being transffered to or from memory. 
+
+### Question 5
+2^7 coulours can be represented
