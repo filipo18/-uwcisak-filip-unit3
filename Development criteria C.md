@@ -39,3 +39,17 @@ AddApp is class of the window we are opening.
 ```.py
 self.name_of_button.clicked.connect(self.nameOfMethod)
 ```
+
+## Showing data from .csv file in the table 
+To show data from .csv file in the mainAplication table, we create method for showing data in the table. First step in this method is to open the file and set how values are separated. In our case wiht comma ```delimiter="," ```
+```.py
+        with open('name_of_the_file.csv') as whatever_you_want:
+            file = csv.reader(whatever_you_want, delimiter=",")
+```
+Then we use 2 for loops and enumerate function to spread data in the data table sorted by columns and rows
+```.py
+            for i, row in enumerate(file):
+                for j, col in enumerate(row):
+                        self.tableWidget.setItem(i, j, QTableWidgetItem(col))
+```
+``` self.tableWidget.setItem(i, j, QTableWidgetItem(col)) ``` This line asings values to boxes in the table. ``` enumerate() ``` function sets numbers to our rows and columns.
