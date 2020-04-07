@@ -1,6 +1,7 @@
+import csv
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QDialog
+from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QDialog, QTableWidgetItem
 
 from mainprogram import mainWindow as mainW
 from login_window import LoginWindow as loginW
@@ -15,7 +16,8 @@ from registration_window import RegisterWindow as regW
 class MainWindowApp(QMainWindow, mainW):
     def __init__(self, parent=None):
         super(MainWindowApp, self).__init__(parent)
-        self.setupUi(self)
+        self.setupUi(self)  # build UI
+        self.data = self.load_data()
 
         loginVar = LoginApp(self)
         loginVar.show()
@@ -27,6 +29,19 @@ class MainWindowApp(QMainWindow, mainW):
         self.butt_logout.clicked.connect(self.exitFunc)
         self.butt_remove.clicked.connect(self.deleteFunc)
         self.butt_return.clicked.connect(self.returnguitarFunc)
+
+    # data base, read comma-separated values file
+    def load_data(self):
+        data = []
+        with open('db.csv') as mydatabase:
+            file = csv.reader(mydatabase, delimiter=",")
+            for i, row in enumerate(file):
+                for j, col in enumerate(row):
+                    if i != 0:  # We don't show the first line
+                        data.append([i, j, col])
+                        self.tableWidget.setItem(i, j, QTableWidgetItem(col))
+
+        return[]
 
     # Button functions
     def addFunc(self):
@@ -56,7 +71,7 @@ class MainWindowApp(QMainWindow, mainW):
 class LoginApp(loginW):
     def __init__(self, parent=None):
         super(LoginApp, self).__init__(parent)
-        self.setupUi(self)
+        self.setupUi(self)  # build UI
 
         # This is a behaviour for exit button
         self.butt_exit.clicked.connect(self.exitFunc)
@@ -74,7 +89,7 @@ class LoginApp(loginW):
 class RegisterApp(regW):
     def __init__(self, parent=None):
         super(RegisterApp, self).__init__(parent)
-        self.setupUi(self)
+        self.setupUi(self)  # build UI
 
         self.butt_exit.clicked.connect(self.exitFunc)
         self.butt_register.clicked.connect(self.try_regFunc)
@@ -93,31 +108,31 @@ class RegisterApp(regW):
 class AddApp(addW):
     def __init__(self, parent=None):
         super(AddApp, self).__init__(parent)
-        self.setupUi(self)
+        self.setupUi(self)  # build UI
 
 
 class DeleteApp(deleteW):
     def __init__(self, parent=None):
         super(DeleteApp, self).__init__(parent)
-        self.setupUi(self)
+        self.setupUi(self)  # Build UI
 
 
 class EditApp(editW):
     def __init__(self, parent=None):
         super(EditApp, self).__init__(parent)
-        self.setupUi(self)
+        self.setupUi(self)  # Build UI
 
 
 class LendApp(lendW):
     def __init__(self, parent=None):
         super(LendApp, self).__init__(parent)
-        self.setupUi(self)
+        self.setupUi(self)  # Build UI
 
 
 class ReturnApp(returnW):
     def __init__(self, parent=None):
         super(ReturnApp, self).__init__(parent)
-        self.setupUi(self)
+        self.setupUi(self)  # build UI
 
 
 app = QApplication(sys.argv)
