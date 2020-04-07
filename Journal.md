@@ -97,3 +97,15 @@ I learned how to plot graph from csv file... at least I thought I did. Then I op
 
 I have few questions about creating graphs but I will google about that tomorrow and try to solve HL Question.
 
+Apr 7
+------
+Tasks:
+1. Finish with HL question
+1. Do the showing data in database development part
+
+I didn't work on the syllabus today.
+I  have no more questions about the HL Question. I solved it. I spend some time debuging it because of 2 causes: **1.** When I append atgument from a row to a list, I need to change it to int(). It took me some time to figure that out. **2.** Number of total cases is around 300.000, and number of total cases in Slovenia is around 300. So when I ploted graph for total cases in Slovenia I just saw a straing line so I thought my program was not working. When I figured out it can be a scale problem I ploted line for Italy on the same graph and I saw that my program is actually wokrking.
+
+I learned how to show .csv file in the table. 
+
+I don't totally understand what is ```i, row``` in  ```for i, row in enumerate(file):``` doing. What do 2 things separated with comma do in for loop?
