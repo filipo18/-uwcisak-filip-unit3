@@ -109,3 +109,17 @@ I  have no more questions about the HL Question. I solved it. I spend some time 
 I learned how to show .csv file in the table. 
 
 I don't totally understand what is ```i, row``` in  ```for i, row in enumerate(file):``` doing. What do 2 things separated with comma do in for loop?
+
+Apr 14
+-------
+Tasks:
+1. DO the coding tasks
+1. Do the syllabus question
+1. Continue develpoment on the Inventroy app
+
+I did not learn anything new with the conding tasks. I finnished them preaty quickly. I don't know what to to about the scale of axes. Because number of Covid-19 cases is so high I dont even seet the change in price of gold. 
+
+I did the syllabus questionn. I did not learn anything new. I did not use the syllabus resources. I just do quick google searches on few components. I know what they do in practise, I just checked on google how to put that in words
+
+I made registration and log in methods. I didn't really learn anything new. We already did encrypting part few months ago in school so I just remembered how this is done. Everyting else that needed coding is basically using what we already know. But I noticed when the inventory develpment goes on, I am geting more and more understanding on python. I was super confused with classes and methods at the benining but now, although I still feel a bit uncomoftable with them, I think I understand what I am doing much better.
+
