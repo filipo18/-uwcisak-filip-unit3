@@ -1,7 +1,8 @@
 import csv
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QDialog, QTableWidgetItem
+from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QDialog, QTableWidgetItem, QMessageBox
+import mylib
 
 from mainprogram import mainWindow as mainW
 from login_window import LoginWindow as loginW
@@ -76,6 +77,19 @@ class LoginApp(loginW):
         # This is a behaviour for exit button
         self.butt_exit.clicked.connect(self.exitFunc)
         self.butt_registration.clicked.connect(self.regFunc)
+        self.butt_login.clicked.connect(self.try_login)
+
+    def try_login(self):
+        username = self.enter_username.text()
+        password = self.enter_password.text()
+        with open("Output.txt", "r") as output_file:
+            for line in output_file:
+                if mylib.verify_password(line, username + password):
+                    self.close()
+                    return
+            self.enter_password.clear()
+            self.enter_username.clear()
+
 
     def exitFunc(self):
         sys.exit(0)  # 0 means exit without errors
@@ -98,11 +112,50 @@ class RegisterApp(regW):
         sys.exit(0)
 
     def try_regFunc(self):
+        if self.validate_registration():
+            self.store()
+
+    def validate_email(self):
         email = self.input_email.text()
-        if '@' not in email:
-            self.input_email.setStyleSheet("border: 2px solid red")
-        else:
+        if '@' in email:
             self.input_email.setStyleSheet("border: 2px solid green")
+            return True
+        self.input_email.setStyleSheet("border: 2px solid red")
+        return False
+
+    def validate_name(self):
+        name = self.input_username.text()
+        if name.isalpha() and len(name) > 5:
+            self.input_username.setStyleSheet("border: 2px solid green")
+            return True
+        self.input_username.setStyleSheet("border: 2px solid red")
+        return False
+
+    def validate_password(self):
+        password = self.input_password.text()
+        password_conf = self.input_confpassword.text()
+        if password != password_conf or len(password) < 5:
+            self.input_password.setStyleSheet("border: 2px solid red")
+            self.input_confpassword.setStyleSheet("border: 2px solid red")
+            return False
+        self.input_password.setStyleSheet("border: 2px solid green")
+        self.input_confpassword.setStyleSheet("border: 2px solid green")
+        return True
+
+    def validate_registration(self):
+        email = self.validate_email()
+        name = self.validate_name()
+        password = self.validate_password()
+        return email and name and password
+
+    def store(self):
+        email = self.input_email.text()
+        password = self.input_password.text()
+        print("Hashng,", email + password)
+        msg = mylib.hash_password(email + password)
+        with open('Output.txt', "a") as output_file:
+            output_file.write('{}\n'.format(msg))
+        self.close()
 
 
 class AddApp(addW):
