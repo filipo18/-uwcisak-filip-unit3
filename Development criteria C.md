@@ -20,27 +20,27 @@ We created this in class just as an example how secure login can be created. The
 
 ### Registration Version 2 (Decomposition)
 
-For verison 2.0 we used this code created by [Alessandro Molina](https://www.vitoshacademy.com/hashing-passwords-in-python/):
+For verison 2.0 we used 2 functions created by Alessandro Molina. [source](https://www.vitoshacademy.com/hashing-passwords-in-python/) **First function** ```def hash_password(password):``` takes password from the user and converts it into hash. TO make password more secure we need to create a salt like in version 1. 
 ```.py
-ef hash_password(password):
-    """Hash a password for storing."""
-    salt = hashlib.sha256(os.urandom(60)).hexdigest().encode('ascii')
-    pwdhash = hashlib.pbkdf2_hmac('sha512', password.encode('utf-8'),
-                                  salt, 100000)
-    pwdhash = binascii.hexlify(pwdhash)
-    return (salt + pwdhash).decode('ascii')
-
-
-def verify_password(stored_password, provided_password):
-    """Verify a stored password against one provided by user"""
-    salt = stored_password[:64]
-    stored_password = stored_password[64:-1]
-    pwdhash = hashlib.pbkdf2_hmac('sha512',
+salt = hashlib.sha256(os.urandom(60)).hexdigest().encode('ascii')
+``` 
+```os.urandom(60)``` Creates 60 random bytes of infrormation. ```.hexdigest()``` Adding this we get has of a default sze of 64 bytes.  To convert 64bytes into 64 ascii text characters we use ```.encode('ascii')``` Then we add salt to a password and hash it to defualt 64 bytes 100000 times to increase randomness:
+```.py
+pwdhash = hashlib.pbkdf2_hmac('sha512', password.encode('utf-8'), salt, 100000)
+```
+```password.encode('utf-8')``` Converts password enetered using UTF-8 protocol. To finnish the function we convert 64bytes of binary information to a hexadecimal string ```  pwdhash = binascii.hexlify(pwdhash)``` and return a string where salt is followed by the hashed password. ``` return (salt + pwdhash).decode('ascii')``` 
+**Second function** ```def verify_password(stored_password, provided_password):``` takes password from the user, comapres it to hash we stored earlier and verifies if it's the same or not. First we take salt as the first 64 characters of the hash
+```.py
+salt = stored_password[:64]
+```
+Then we take password from the user as the second 64 characters of the hash. An then with that we generate the hash again following the same process as before and if that gives us same hash as we got from the fisrt function we return True:
+```.py
+pwdhash = hashlib.pbkdf2_hmac('sha512',
                                   provided_password.encode('utf-8'),
                                   salt.encode('ascii'),
                                   100000)
-    pwdhash = binascii.hexlify(pwdhash).decode('ascii')
-    return pwdhash == stored_password
+pwdhash = binascii.hexlify(pwdhash).decode('ascii')
+return pwdhash == stored_password
 ```
 
 
