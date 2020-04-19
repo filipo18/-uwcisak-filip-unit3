@@ -12,11 +12,37 @@ When user enters his credentials home page opens. TAble of guitars is shown ther
 
 ## Registration
 
-![Registration flow diagram](Login.jpg)
+![Registration flow diagram version 1.0](Login.jpg)
 
-**Fig 1.** Registration flow diagram
+**Fig 1.** Registration flow diagram version 1.0
 
-This is ethod for secure log in where developer is not able to see password user has entered. We achive that by using ``` hashlib ``` and ```os``` librarys. Fisrt step in the flow diagram Fig 1. is to crate dictionary. Dictionary is type of list which let's you store arguents ``` user = {'username': None, 'password-hash': None, 'salt': None}``` and then use them or edit them by using name of the element instead of the number ``` user['username'] = username user['password-hash'] = key user['salt'] = salt ```. Register and log in are similar processes. In both we ask user to enter username and password. In registration we store username and password. We encrypt password using salt and hashlib library. Fisrt we generate salt ``` salt = os.urandom(32) ```. That is 32 random numbers that we will add to passsowrd eneter by user to make it harder to decrypt. Than we generate log in key by encriptyng the passowrd ```key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 1000)```. Number 1000 at the end means that we run algorithm 1000 times. For log in we take password that user enters, repat process from before (add salt and encrpyt everything together) and then we compare what we generated to stored key. This is not finnished login system yet. Program will be further developed and flow digagram above will be updated accordingly. This is just outline / simple base for actuall login. Program for now stores data just in program meaning when we stop it data is lost. we also don't have actual login part of the program yet. User is not able to enter user name in passowrd to log in. For now this is done in program just for testing purposes.
+We created this in class just as an example how secure login can be created. The final version will be similar to this and will follow similar priciples. This is ethod for secure log in where developer is not able to see password user has entered. We achive that by using ``` hashlib ``` and ```os``` librarys. Fisrt step in the flow diagram Fig 1. is to crate dictionary. Dictionary is type of list which let's you store arguents ``` user = {'username': None, 'password-hash': None, 'salt': None}``` and then use them or edit them by using name of the element instead of the number ``` user['username'] = username user['password-hash'] = key user['salt'] = salt ```. Register and log in are similar processes. In both we ask user to enter username and password. In registration we store username and password. We encrypt password using salt and hashlib library. Fisrt we generate salt ``` salt = os.urandom(32) ```. That is 32 random numbers that we will add to passsowrd eneter by user to make it harder to decrypt. Than we generate log in key by encriptyng the passowrd ```key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 1000)```. Number 1000 at the end means that we run algorithm 1000 times. For log in we take password that user enters, repat process from before (add salt and encrpyt everything together) and then we compare what we generated to stored key. This is not finnished login system yet. Program will be further developed and flow digagram above will be updated accordingly. This is just outline / simple base for actuall login. Program for now stores data just in program meaning when we stop it data is lost. we also don't have actual login part of the program yet. User is not able to enter user name in passowrd to log in. For now this is done in program just for testing purposes.
+
+### Registration Version 2 (Decomposition)
+
+For verison 2.0 we used this code created by #[Alessandro Molina](https://www.vitoshacademy.com/hashing-passwords-in-python/):
+```.py
+ef hash_password(password):
+    """Hash a password for storing."""
+    salt = hashlib.sha256(os.urandom(60)).hexdigest().encode('ascii')
+    pwdhash = hashlib.pbkdf2_hmac('sha512', password.encode('utf-8'),
+                                  salt, 100000)
+    pwdhash = binascii.hexlify(pwdhash)
+    return (salt + pwdhash).decode('ascii')
+
+
+def verify_password(stored_password, provided_password):
+    """Verify a stored password against one provided by user"""
+    salt = stored_password[:64]
+    stored_password = stored_password[64:-1]
+    pwdhash = hashlib.pbkdf2_hmac('sha512',
+                                  provided_password.encode('utf-8'),
+                                  salt.encode('ascii'),
+                                  100000)
+    pwdhash = binascii.hexlify(pwdhash).decode('ascii')
+    return pwdhash == stored_password
+```
+
 
 ## Showing dialog windows and opening them with buttons
 I gave all the buttons in main app window, functionality to open related dialog windows. There are few steps in process of making this work:
