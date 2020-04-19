@@ -123,3 +123,15 @@ I did the syllabus questionn. I did not learn anything new. I did not use the sy
 
 I made registration and log in methods. I didn't really learn anything new. We already did encrypting part few months ago in school so I just remembered how this is done. Everyting else that needed coding is basically using what we already know. But I noticed when the inventory develpment goes on, I am geting more and more understanding on python. I was super confused with classes and methods at the benining but now, although I still feel a bit uncomoftable with them, I think I understand what I am doing much better.
 
+Apr 19
+------
+1. Complete development file from last week
+2. Do this weeks tasks
+
+Questions from this weeks homework:
+1.How do i increse number of bycicles every time by 1 when new bycicle is created
+1.How do I set default value in this class for atribute from parent class
+1.How do i create a list that stores the objects of bicycles and mountain bikes created
+
+I did not study syllabus this week. I refreshed some of my basic knowledge about OOP
+
