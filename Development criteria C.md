@@ -20,7 +20,7 @@ We created this in class just as an example how secure login can be created. The
 
 ### Registration Version 2 (Decomposition)
 
-For verison 2.0 we used this code created by #[Alessandro Molina](https://www.vitoshacademy.com/hashing-passwords-in-python/):
+For verison 2.0 we used this code created by [Alessandro Molina](https://www.vitoshacademy.com/hashing-passwords-in-python/):
 ```.py
 ef hash_password(password):
     """Hash a password for storing."""
