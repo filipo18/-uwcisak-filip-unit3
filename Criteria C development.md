@@ -34,7 +34,7 @@ return pwdhash == stored_password
 ```
 
 
-## Showing dialog windows and opening them with buttons
+## Showing dialog windows and opening them with buttons 
 I gave all the buttons in main app window, functionality to open related dialog windows. There are few steps in process of making this work:
 1. We create class for every window in our application. We do that by using syntax
 ```.py
@@ -69,3 +69,6 @@ Then we use 2 for loops and enumerate function to spread data in the data table 
                         self.tableWidget.setItem(i, j, QTableWidgetItem(col))
 ```
 ``` self.tableWidget.setItem(i, j, QTableWidgetItem(col)) ``` This line asings values to boxes in the table. ``` enumerate() ``` function sets numbers to our rows and columns.
+
+
+
