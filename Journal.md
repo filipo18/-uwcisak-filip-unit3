@@ -135,3 +135,8 @@ Questions from this weeks homework:
 
 I did not study syllabus this week. I refreshed some of my basic knowledge about OOP
 
+Apr 29
+-------
+1. Complete all the tasks for unit 3
+
+I spent whole day finishing the inventory project and my conclusion is that tools we used: Python, QT Designer and PYQt were not the best choice for GUI development because debugging is close to impossible.Errors are not logical and really hard to spot. I spend whole day printing out line by line of my program to debug it, and when I found the issue it was not syntax issue as it is usually. Some bugs were not logical and none of the error codes is googlable. 
