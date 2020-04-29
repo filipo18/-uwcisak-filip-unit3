@@ -55,6 +55,7 @@ class RegisterWindow(QDialog):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.input_email.setFont(font)
+        self.input_email.setStyleSheet("border: 2px solid red")
         self.input_email.setText("")
         self.input_email.setCursorPosition(0)
         self.input_email.setObjectName("input_email")
@@ -71,6 +72,7 @@ class RegisterWindow(QDialog):
         font.setPointSize(11)
         self.input_password.setFont(font)
         self.input_password.setText("")
+        self.input_password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.input_password.setObjectName("input_password")
         self.verticalLayout.addWidget(self.input_password)
         self.input_confpassword = QtWidgets.QLineEdit(self.layoutWidget)
@@ -78,6 +80,7 @@ class RegisterWindow(QDialog):
         font.setPointSize(11)
         self.input_confpassword.setFont(font)
         self.input_confpassword.setText("")
+        self.input_confpassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.input_confpassword.setObjectName("input_confpassword")
         self.verticalLayout.addWidget(self.input_confpassword)
 

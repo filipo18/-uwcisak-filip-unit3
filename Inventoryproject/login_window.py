@@ -69,6 +69,7 @@ class LoginWindow(QDialog):
         self.verticalLayout.addWidget(self.text_password)
         self.enter_password = QtWidgets.QLineEdit(self.layoutWidget)
         self.enter_password.setText("")
+        self.enter_password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.enter_password.setObjectName("enter_password")
         self.verticalLayout.addWidget(self.enter_password)
         self.butt_login = QtWidgets.QPushButton(self.layoutWidget)
@@ -93,7 +94,7 @@ class LoginWindow(QDialog):
         self.butt_exit.raise_()
         self.enter_password.raise_()
         self.text_username.raise_()
-        self.pic_background.lower()
+        self.pic_background.raise_()
         self.layoutWidget.raise_()
         self.title.raise_()
         self.text_log_in.raise_()
@@ -113,3 +114,4 @@ class LoginWindow(QDialog):
         self.butt_login.setText(_translate("Dialog", "LOG IN"))
         self.butt_registration.setText(_translate("Dialog", "REGISTER"))
         self.butt_exit.setText(_translate("Dialog", "EXIT"))
+

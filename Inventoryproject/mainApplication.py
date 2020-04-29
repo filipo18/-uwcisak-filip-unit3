@@ -1,7 +1,8 @@
 import csv
+from csv import writer
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QDialog, QTableWidgetItem, QMessageBox
+from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QDialog, QTableWidgetItem, QMessageBox, QTableWidget
 import mylib
 
 from mainprogram import mainWindow as mainW
@@ -19,17 +20,48 @@ class MainWindowApp(QMainWindow, mainW):
         super(MainWindowApp, self).__init__(parent)
         self.setupUi(self)  # build UI
         self.data = self.load_data()
+        self.tableWidget.cellChanged.connect(self.changeDB)
+        self.butt_save.clicked.connect(self.save)
+        self.butt_reset.clicked.connect(self.cancel)
 
         loginVar = LoginApp(self)
         loginVar.show()
-
         # This is a behaviour for buttons for main app window
-        self.butt_addguitar.clicked.connect(self.addFunc)
-        self.butt_edit.clicked.connect(self.editFunc)
-        self.butt_lend.clicked.connect(self.lendFunc)
         self.butt_logout.clicked.connect(self.exitFunc)
-        self.butt_remove.clicked.connect(self.deleteFunc)
-        self.butt_return.clicked.connect(self.returnguitarFunc)
+
+
+    # this is a method for changing table widget
+    def changeDB(self):
+        item = self.tableWidget.currentItem()  # cell clicked
+        row = self.tableWidget.currentRow()  # row clicked
+        col = self.tableWidget.currentColumn()  # column selected
+        # change the color of the cell clicked
+        self.tableWidget.item(row, col).setBackground(QtGui.QColor(100, 100, 150))
+        # show the item in the terminal for debuging
+        print(item.text())
+        print(item)
+        self.butt_save.setDisabled(False)
+        self.butt_reset.setDisabled(False)
+
+    def save(self):
+        print("Save to CSV File")
+        first = ['id', 'name', 'type', 'color', 'type_of_wood', 'borrowed', 'returned']
+        id = [self.tableWidget.item(row, 0).text() for row in range(self.tableWidget.rowCount())]
+        name = [self.tableWidget.item(row, 1).text() for row in range(self.tableWidget.rowCount())]
+        type = [self.tableWidget.item(row, 2).text() for row in range(self.tableWidget.rowCount())]
+        color = [self.tableWidget.item(row, 3).text() for row in range(self.tableWidget.rowCount())]
+        type_of_wood = [self.tableWidget.item(row, 4).text() for row in range(self.tableWidget.rowCount())]
+        borrowed = [self.tableWidget.item(row, 5).text() for row in range(self.tableWidget.rowCount())]
+        returned = [self.tableWidget.item(row, 6).text() for row in range(self.tableWidget.rowCount())]
+        table = [id, name, type, color, type_of_wood, borrowed, returned]
+
+        row_list = list(zip(*table))
+        with open('db.csv', 'w', newline='') as database:
+            writer = csv.writer(database)
+            writer.writerows(row_list)
+
+    def cancel(self):
+        self.load_data()
 
     # data base, read comma-separated values file
     def load_data(self):
@@ -38,9 +70,8 @@ class MainWindowApp(QMainWindow, mainW):
             file = csv.reader(mydatabase, delimiter=",")
             for i, row in enumerate(file):
                 for j, col in enumerate(row):
-                    if i != 0:  # We don't show the first line
-                        data.append([i, j, col])
-                        self.tableWidget.setItem(i, j, QTableWidgetItem(col))
+                    data.append([i, j, col])
+                    self.tableWidget.setItem(i, j, QTableWidgetItem(col))
 
         return[]
 
@@ -49,21 +80,10 @@ class MainWindowApp(QMainWindow, mainW):
         addVar = AddApp(self)
         addVar.show()
 
-    def editFunc(self):
-        editVar = EditApp(self)
-        editVar.show()
-
     def deleteFunc(self):
         deleteVar = DeleteApp(self)
         deleteVar.show()
 
-    def lendFunc(self):
-        lendVar = LendApp(self)
-        lendVar.show()
-
-    def returnguitarFunc(self):
-        returnVar = ReturnApp(self)
-        returnVar.show()
 
     def exitFunc(self):
         sys.exit(0)
@@ -87,6 +107,7 @@ class LoginApp(loginW):
                 if mylib.verify_password(line, username + password):
                     self.close()
                     return
+            QMessageBox.about(self, "Error", "Error: Wrong password")  # showing error message if password wrong
             self.enter_password.clear()
             self.enter_username.clear()
 
@@ -119,6 +140,7 @@ class RegisterApp(regW):
         email = self.input_email.text()
         if '@' in email:
             self.input_email.setStyleSheet("border: 2px solid green")
+            QMessageBox.about(self, "Error", "Error: Enter valid email")
             return True
         self.input_email.setStyleSheet("border: 2px solid red")
         return False
@@ -129,6 +151,7 @@ class RegisterApp(regW):
             self.input_username.setStyleSheet("border: 2px solid green")
             return True
         self.input_username.setStyleSheet("border: 2px solid red")
+        QMessageBox.about(self, "Error", "Error: Include only letters, password must be longer than 5 characters")
         return False
 
     def validate_password(self):
@@ -137,6 +160,7 @@ class RegisterApp(regW):
         if password != password_conf or len(password) < 5:
             self.input_password.setStyleSheet("border: 2px solid red")
             self.input_confpassword.setStyleSheet("border: 2px solid red")
+            QMessageBox.about(self, "Error", "Error: Password is not longer than 5 or passwords don't match")
             return False
         self.input_password.setStyleSheet("border: 2px solid green")
         self.input_confpassword.setStyleSheet("border: 2px solid green")
@@ -150,11 +174,14 @@ class RegisterApp(regW):
 
     def store(self):
         email = self.input_email.text()
+        username = self.input_username.text()
         password = self.input_password.text()
-        print("Hashng,", email + password)
-        msg = mylib.hash_password(email + password)
+        print("Hashing,", email + password)
+        msgE = mylib.hash_password(email + password)
+        msgU = mylib.hash_password(username + password)
         with open('Output.txt', "a") as output_file:
-            output_file.write('{}\n'.format(msg))
+            output_file.write('{}\n'.format(msgE))
+            output_file.write('{}\n'.format(msgU))
         self.close()
 
 
