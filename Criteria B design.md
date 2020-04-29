@@ -16,20 +16,26 @@ When user enters his credentials home page opens. TAble of guitars is shown ther
 ## Design 2.0
 Due to not knowing tools I was using before the start of development and to running out of time, desings got simpler in final stage of the develpomnet. Since you are able to add edit and delete - all that in the QT Table Widget, I don't need to code each function seperatley. I can just update data base every time change in table is made, which was really convinient to finish the program soon enaugh.
 
+![System diagram](systemdiagram.png)
+
+**Fig 2.** System diagram for design 2.0
+
+As we can see on Fig 2, most of the pop up windows are eliminated. All the edits are made in the table. The only 2 windows I still kept are login and register window. When user enters registration credentials, his email and password are hashed and stored in the database. When user tries to login, his login credentials are comapred against stored hash.
+
 ![Home](table.png)
 
-**Fig 2.** Home page with the table.
+**Fig 3.** Home page with the table.
 
 Now it has only 3 buttons. One for logging out and closing the program. The other 2 buttons are for saving or canceling the changes in the table.
 
 ![Login](login.png)
 
-**Fig 3.** Login page
+**Fig 4.** Login page
 
 User can login from this page pressing LOGIN button. If new user wants to register in the applciation, they can press register button which takes them to register window bellow:
 
 ![Registration](register.png)
 
-**Fig 4.** Registration window
+**Fig 5.** Registration window
 
 User can register themselves from this window. In order to do that they need to meet few requirements. Email must contain **@**, Username must be only from characters and longer than 5. Passwords must be longer than 5 and they need to match.
