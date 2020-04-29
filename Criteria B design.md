@@ -39,3 +39,10 @@ User can login from this page pressing LOGIN button. If new user wants to regist
 **Fig 5.** Registration window
 
 User can register themselves from this window. In order to do that they need to meet few requirements. Email must contain **@**, Username must be only from characters and longer than 5. Passwords must be longer than 5 and they need to match.
+
+## Testing plan
+Table on Fig 6 is created accroding to succes criteria and will be used for evaluation in criteria D:
+
+![Testing.png](Testing.png)
+
+**Fig 6.** Testing table
