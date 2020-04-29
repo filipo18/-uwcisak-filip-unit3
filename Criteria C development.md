@@ -32,7 +32,21 @@ pwdhash = hashlib.pbkdf2_hmac('sha512',
 pwdhash = binascii.hexlify(pwdhash).decode('ascii')
 return pwdhash == stored_password
 ```
+## Validating registration
+To validate registration we need to make sure that user entered all the correct data, to do that few steps are needed: **(algorithmic thinking)**
+1. save text that user input as a variable
+2. check if variable is meeting all the requirements:
+* more then 5 characters for username and password
+* **@** char in the email
+* password and confirm password are the same
+3. If any of the boxes is not filled according to the requirements we show error message box to the user with the explanation
+4. When the requirements for email username and password are meet, registration is valid and user data is stored in the text file
 
+Flow diagram for password validation shown bellow:
+
+![passwrod validation](flow.png)
+
+**Fig 2.** Flow diagram for the password validation
 
 ## Showing dialog windows and opening them with buttons 
 I gave all the buttons in main app window, functionality to open related dialog windows. There are few steps in process of making this work:
